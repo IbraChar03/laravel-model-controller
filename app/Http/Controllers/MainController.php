@@ -11,8 +11,9 @@ class MainController extends Controller
     public function prova()
     {
         $movies = Movies::all();
-        var_dump($movies);
-
-        return view("pages.welcome", $movies);
+        $data = [
+            'movies' => $movies
+        ];
+        return view("pages.welcome", $data);
     }
 }
