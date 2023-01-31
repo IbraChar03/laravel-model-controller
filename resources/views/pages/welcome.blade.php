@@ -1,11 +1,20 @@
 @extends('layouts.main-layout')
 @section('content')
-<ul> 
+<main>
+<div class="container">
     @foreach ($movies as $movie)
-        <li>
-        <strong>Title :</strong> {{$movie -> title}} -- <strong>Original Title : </strong> {{$movie -> original_title}} -- <strong>Nationality : </strong> {{$movie -> nationality}}
-        </li>
+    <div class="box">
+        
+        <strong>Title :</strong> {{$movie -> title}}  <br>
+        <strong>Original Title : </strong> {{$movie -> original_title}}  <br>
+        <strong>Nationality : </strong> {{$movie -> nationality}} <br>
+        <strong>Release Date : </strong> {{$movie -> date}} <br>
+        <strong>Vote : </strong> {{$movie -> vote}}
+        
         <br>
+       </div>
     @endforeach
-</ul>
+</div>
+</main>
+
 @endsection
